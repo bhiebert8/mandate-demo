@@ -1,0 +1,6 @@
+{
+  "_readme": "Brand values currently written into the pages. Change them with tools/rename.ps1, which rewrites every page and then this file. Editing this file by hand changes nothing.",
+  "name": "Mandate",
+  "email": "contact@example.com",
+  "url": "https://www.example.com"
+}
