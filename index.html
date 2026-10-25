@@ -29,7 +29,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Mandate home">
-        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#0b6e8f"/><rect x="6" y="8" width="20" height="2" rx="1" fill="#fff" fill-opacity=".6"/><rect x="8" y="16" width="4" height="8" rx="1" fill="#fff"/><rect x="14" y="12" width="4" height="12" rx="1" fill="#fff"/><rect x="20" y="18" width="4" height="6" rx="1" fill="#fff"/></svg>
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="bm1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22b3dc"/><stop offset=".55" stop-color="#08759b"/><stop offset="1" stop-color="#065a78"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#bm1)"/><path d="M9 22V11l7 7 7-7v11" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span>Mandate</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
@@ -49,7 +49,7 @@
     <section class="hero">
       <div class="container">
         <p class="status">Version 0.1, in private testing</p>
-        <h1>Compliance monitoring for ETF issuers</h1>
+        <h1>Compliance monitoring for <span class="h-accent">ETF issuers</span></h1>
         <p class="lead">Mandate checks each fund's holdings every day against the limits in its prospectus, its SAI and the 1940 Act. It is for small and mid-size U.S. ETF issuers and is installed on your own Windows machines.</p>
         <div class="actions">
           <a class="btn btn--primary" href="contact.html">Request a demo</a>
@@ -57,16 +57,16 @@
         </div>
 
         <figure class="hero-figure">
-          <div class="shot">
+          <div class="stage"><div class="shot">
             <picture>
               <source media="(max-width: 640px)" srcset="assets/img/overview-panel-447.webp 447w, assets/img/overview-panel-894.webp 894w" sizes="100vw" width="447" height="638">
             <img src="assets/img/overview-1440.webp"
                  srcset="assets/img/overview-1440.webp 1440w, assets/img/overview-2400.webp 2400w"
                  sizes="(min-width: 1248px) 1200px, 100vw"
                  width="1440" height="900" fetchpriority="high"
-                 alt="Overview screen for a fictional trust with five ETFs: one open breach, two warnings and 21 rules in force, a list of funds with their breach and warning counts, and the rules closest to their limits.">
+                 alt="Overview screen for a fictional trust with five ETFs: a to-do list with one breach and one warning to review, the funds with their breach and warning counts, and the passing rules nearest their limits.">
             </picture>
-          </div>
+          </div></div>
           <figcaption>Overview screen. Harborview ETF Trust and its funds are fictional demo data.</figcaption>
         </figure>
       </div>
@@ -75,20 +75,34 @@
     <section class="section" aria-labelledby="does-heading">
       <div class="container">
         <h2 id="does-heading" class="section-head">What it does</h2>
-        <ul class="facts">
+        <ul class="facts facts--3">
           <li>
+            <span class="fact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
             <h3>Daily checks</h3>
-            <p>Rules run on a schedule against each day's holdings file.</p>
+            <p>Rules run on a schedule, or as soon as the day's holdings files arrive. Market holidays are skipped.</p>
           </li>
           <li>
+            <span class="fact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
             <h3>Exceptions</h3>
             <p>Each breach or warning gets an owner, notes, an acknowledgement and an active or passive classification.</p>
           </li>
           <li>
+            <span class="fact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <h3>Your whole team</h3>
+            <p>Everyone signs in with their own account. Notes, sign-offs and changes carry their name. No per-seat fees.</p>
+          </li>
+          <li>
+            <span class="fact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+            <h3>Bloomberg fields</h3>
+            <p>Rules can test issuer, ratings, industry, country, duration and other Bloomberg fields, looked up by ISIN or CUSIP.</p>
+          </li>
+          <li>
+            <span class="fact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></span>
             <h3>Audit trail</h3>
             <p>Changes are recorded, and each rule keeps its version history.</p>
           </li>
           <li>
+            <span class="fact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/></svg></span>
             <h3>Reports and alerts</h3>
             <p>Excel reports for each run. Alerts by email, Slack or Microsoft Teams.</p>
           </li>
@@ -139,6 +153,10 @@
             <dd>A one-time service: we install the software, connect Bloomberg, map your files and build your rules from your prospectus and SAI.</dd>
           </div>
           <div>
+            <dt>Updates</dt>
+            <dd>Updates install in one step. Mandate makes a verified backup of your data before every upgrade, and your history and rules carry over.</dd>
+          </div>
+          <div>
             <dt>Your data</dt>
             <dd>Holdings data stays on your machines. Mandate sends us one daily license check-in with license and version details and active fund and user counts. If you turn on alerts, they go out by email through your own mail server, or to Slack or Microsoft Teams. See <a href="security.html">Security and deployment</a>.</dd>
           </div>
@@ -173,7 +191,7 @@
       <div class="footer-grid">
         <div>
           <a class="brand" href="index.html" aria-label="Mandate home">
-            <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#0b6e8f"/><rect x="6" y="8" width="20" height="2" rx="1" fill="#fff" fill-opacity=".6"/><rect x="8" y="16" width="4" height="8" rx="1" fill="#fff"/><rect x="14" y="12" width="4" height="12" rx="1" fill="#fff"/><rect x="20" y="18" width="4" height="6" rx="1" fill="#fff"/></svg>
+            <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="bm2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22b3dc"/><stop offset=".55" stop-color="#08759b"/><stop offset="1" stop-color="#065a78"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#bm2)"/><path d="M9 22V11l7 7 7-7v11" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span>Mandate</span>
           </a>
           <p>Compliance monitoring software for U.S. ETF issuers. Version 0.1, in private testing.</p>
